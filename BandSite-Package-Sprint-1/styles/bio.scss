@@ -1,0 +1,16 @@
+
+@use "./partials/header" as *;
+@use "./partials/mixins" as *;
+@use "./partials/variables" as *;
+@use "./partials/hero" as *;
+@use "./partials/biography" as *;
+@use "./partials/gallery" as *;
+@use "./partials/footer" as *;
+
+* {
+
+margin: 0;
+padding: 0;
+font-family: Avenir-Next;
+
+}

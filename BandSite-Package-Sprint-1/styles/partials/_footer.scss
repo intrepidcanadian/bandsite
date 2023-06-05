@@ -1,0 +1,283 @@
+@use "./variables" as *;
+@use "./mixins" as *;
+
+
+.mobile_only {
+
+    @include mobile {
+        visibility:visible;
+    }
+    @include tablet {
+        display: none;
+    }
+    @include desktop {
+        display: none;
+    }
+
+}
+.tabletdesktop_only {
+
+    @include mobile {
+       display: none;
+    }
+    @include tablet {
+        visibility:visible;
+    }
+    @include desktop {
+        visibility:visible;
+    }
+
+}
+
+.footer{
+
+    &__container {
+
+        background-color: $BandSite-Black;
+
+         
+}
+
+&__top {
+    display: flex;
+    flex-direction: row;
+    
+        @include mobile {
+            padding: 24px 16px 16px 16px;
+        }
+
+        @include tablet {
+            padding: 48px 36px 36px 36px;
+        }
+
+        @include desktop {
+            padding: 48px 36px 36px 36px;     
+        }
+        }
+
+&__title {
+
+    color: $White;
+    @include fontstyle (24px, 32px, 700);
+    
+}
+&__icons {
+
+    display: flex;
+
+    @include mobile {
+    padding-left: 24px;
+    }
+    padding-left: 36px;
+    
+}
+&__logos {
+    display: flex;
+
+     @include mobile {
+    height: 20px;
+    width: 120px;
+    // width: 10%;
+    padding-left: 0px;
+    padding-bottom: 16px;
+    }
+    @include tablet {
+        margin-left: auto;
+        padding-right: 36px;
+               }
+    @include desktop {
+        margin-left:auto;
+        padding-right: 36px;
+            }
+      
+    }
+}
+
+.footer {
+
+    &__middle {
+        
+        display: flex;
+        
+
+        @include mobile {
+            padding: 0px 16px 16px 16px;
+            flex-direction: column;
+            width: 90%;
+        }
+
+        @include tablet {
+            padding: 0px 36px 36px 36px;
+            flex-direction: columns;
+            width: 90%;
+        }
+
+        @include desktop {
+            padding: 0px 36px 36px 36px;
+            flex-direction: columns; 
+            width: 80%;    
+        }
+
+
+
+    }    
+    
+    &__company {
+
+            display: inline-grid;
+            color: $White;
+
+            @include mobile {
+                grid-auto-flow: row;
+                flex-basis: 30%;
+                padding-bottom: 16px;
+                @include fontstyle (13px,18px,600);
+            }
+
+            @include tablet {
+                flex-basis: 30%;
+                @include fontstyle (14px,20px,600);
+            }
+
+            @include desktop {
+                flex-basis: 30%;
+                @include fontstyle (14px,20px,600);
+            }
+            
+            
+
+
+        }
+
+    &__bottom {
+
+            display: flex;
+            
+            @include mobile {
+                padding: 0px 16px 16px 16px;
+                flex-direction: column;
+            }
+    
+            @include tablet {
+                padding: 0px 36px 36px 36px;
+                width: 90%;
+                flex-direction: columns;
+            }
+    
+            @include desktop {
+                padding: 0px 36px 36px 36px;
+                width: 80%;
+                flex-direction: columns;     
+            }
+        }         
+        
+    &__address {
+    
+                flex-basis: 30%;
+                display: inline-grid;
+                color: $White;
+
+                @include mobile {
+                    @include fontstyle (13px,18px,400);
+                    padding-bottom: 16px;
+                }
+    
+                @include tablet {
+                    @include fontstyle (14px,20px,400);
+                }
+    
+                @include desktop {
+                    @include fontstyle (14px,20px,400);
+                }
+                
+            }
+        
+    &__email {
+
+            display: flex;
+
+            
+            @include mobile {
+                padding: 0px 16px 16px 16px;
+                flex-direction: column;
+            }
+    
+            @include tablet {
+                padding: 0px 36px 36px 36px;
+                width: 90%;
+                flex-direction: columns;
+            }
+    
+            @include desktop {
+                padding: 0px 36px 36px 36px; 
+                width: 80%;
+                flex-direction: columns;    
+            }
+        }         
+        
+    &__contact {
+    
+                flex-basis: 30%;
+                display: inline-grid;
+                color: $White;
+                text-decoration: none;
+                @include mobile {
+                    @include fontstyle (13px,18px,400);
+                    padding-bottom: 16px;
+                }
+    
+                @include tablet {
+                    @include fontstyle (14px,20px,400);
+                }
+    
+                @include desktop {
+                    @include fontstyle (14px,20px,400);
+                }
+            }
+        }
+
+
+
+
+
+.copyright {
+
+            display: flex;
+            width: 100%;
+            @include mobile {
+                padding: 0px 16px 16px 16px;
+                flex-direction: column;
+            }
+    
+            @include tablet {
+                padding: 0px 36px 36px 36px;
+                flex-direction: columns;
+            }
+    
+            @include desktop {
+                padding: 0px 36px 36px 36px;
+                flex-direction: columns;     
+            }
+         
+    &__text {
+                
+                display: inline-grid;
+                color: $White;
+                @include mobile {
+                    flex-basis: 100%;
+                    @include fontstyle (13px,18px,400);
+                }
+    
+                @include tablet {
+                    @include fontstyle (14px,20px,400);
+                    flex-basis: 100%;
+                }
+    
+                @include desktop {
+                    @include fontstyle (14px,20px,400);
+                    flex-basis: 100%;
+                }
+            }
+    
+    
+}

@@ -1,0 +1,149 @@
+@use "./variables" as *;
+@use "./mixins" as *;
+
+.pageHeader-list {
+
+    background-color: $BandSite-Black;
+    font-family: Avenir-Next;
+    color: $White;
+    position: fixed;
+    top: 0;
+    display: flex;
+    width: 100vw;
+    z-index: 3;
+
+    @include mobile {
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    @include tablet {
+        display: flex;
+        align-items: center;
+
+    }
+
+    @include desktop {
+        display: flex;
+        align-items: center;
+    }
+
+    &__logo {
+        display: flex;
+        height: 20px;
+        align-items: center;
+        justify-content: space-evenly;
+
+        @include mobile {
+            padding: 24px 36px 8px 36px;
+        }
+        @include tablet {
+            padding: 24px 36px 16px 36px;
+        }
+        @include desktop {
+            padding: 24px 36px 16px 36px;
+        }
+
+    }
+
+
+
+    &__nav {
+
+        // width: 100%;
+
+        @include mobile {
+            display: flex;
+            justify-content: space-evenly;
+
+        }
+
+
+        @include tablet {
+            display: flex;
+
+        }
+
+        @include desktop {
+            display: flex;
+        }
+
+        &--items {
+            &:active,
+            &:hover {
+                @include mobile {
+                                border-bottom: 3px solid white;
+                            }
+            }
+            
+            @include mobile {
+                padding: 24px 16px 16px 16px;
+                display: flex;
+                flex: 1;
+                justify-content: center;
+                @include fontstyle (24px, 32px, 700);
+               
+            }
+            @include tablet {
+                padding: 0px 36px 0px 36px;
+                display: flex;
+                flex: 1;
+                justify-content: center;
+                @include fontstyle (14px, 22px, 400);
+               
+            }
+
+            @include desktop {
+                padding: 0px 36px 0px 36px;
+                display: flex;
+                flex: 1;
+                justify-content: center;
+                @include fontstyle (14px, 22px, 400);
+               
+            }
+        }
+        
+
+        &--link {
+            text-decoration: none;
+            color: $Mercury;
+            font-weight: 400;
+
+            @include mobile {
+            padding: 0px 0px 0px 0px;
+            }
+
+            @include tablet {
+                padding: 24px 0px 16px 0px;
+            }
+
+            @include desktop {
+                padding: 24px 0px 16px 0px;
+            }
+
+            }
+
+        &--link {
+
+            &:active,
+                &:hover {
+                    text-decoration: none;
+                    color: white;
+                    font-weight: bold;
+
+                    @include tablet {
+                        border-bottom: 3px solid white;
+ 
+                    }
+                    @include desktop {
+                            border-bottom: 3px solid white;
+                        }
+                }
+            }
+
+
+        }
+
+
+    }

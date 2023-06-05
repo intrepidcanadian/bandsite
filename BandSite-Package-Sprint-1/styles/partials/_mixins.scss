@@ -1,0 +1,42 @@
+@mixin mobile {
+    @media (min-width:0px) and (max-width:767px) {
+        @content
+    }
+};
+
+@mixin tablet {
+    @media (min-width:768px) and (max-width:1279px) {
+        @content
+    }
+};
+
+@mixin desktop {
+    @media (min-width:1280px) {
+        @content
+    }
+};
+
+@mixin fontstyle($text-size, $line-height, $text-weight) {
+    font-size: $text-size;
+    line-height: $line-height;
+    font-weight: $text-weight;
+};
+
+@font-face {
+
+    font-family: 'Avenir-Next';
+    src: url("../assets/fonts/avenir-next-bold.woff") format("woff");
+    font-weight: 700;
+}
+@font-face {
+    font-family: 'Avenir-Next';
+    src: url("../assets/fonts/avenir-next-regular.woff") format("woff");
+    font-weight: 400;
+}
+@font-face {
+
+    font-family: 'Avenir-Next';
+    src: url("../assets/fonts/avenir-next-demi.woff") format("woff");
+    font-weight: 600; 
+
+}

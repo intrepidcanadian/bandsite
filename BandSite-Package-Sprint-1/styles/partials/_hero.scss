@@ -1,0 +1,55 @@
+@use "./variables" as *;
+@use "./mixins" as *;
+
+
+.heroPage {
+    display: flex;                                                                                                                                                                                                       ;
+    flex-direction: column;
+
+
+    @include mobile {
+        margin-top:7.3rem;
+    }
+
+    @include tablet {
+        margin-top:3rem;
+
+    }
+
+    @include desktop {
+        margin-top:3rem;
+    }
+
+
+    &__cover {
+            width: 100vw;
+            z-index: 1;
+            position: relative;
+    
+        }
+
+
+    &__title {
+
+        // display: flex;
+        position: absolute;
+        color: white;
+        z-index: 2;
+
+        @include mobile {
+            @include fontstyle(24px, 32px, 700);
+            padding: 10rem 36px 10rem 36px;
+        }
+    
+        @include tablet {
+            @include fontstyle(36px, 44px, 700);
+            padding: 25rem 36px 10rem 36px;
+        }
+
+        @include desktop {
+            @include fontstyle(36px, 44px, 700);
+            padding: 25rem 36px 10rem 36px;
+        }
+    }
+
+}
