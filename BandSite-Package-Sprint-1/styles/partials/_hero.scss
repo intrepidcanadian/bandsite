@@ -3,12 +3,16 @@
 
 
 .heroPage {
-    display: flex;                                                                                                                                                                                                       ;
-    flex-direction: column;
+    background-image: url("../assets/images/hero-bio.jpg");
+    display: flex;  
+    align-items: center;
+    height: 50vh;
 
-
+    
+                                                                                                                                                                                                         ;
+    
     @include mobile {
-        margin-top:7.3rem;
+        margin-top:6.5rem;
     }
 
     @include tablet {
@@ -21,34 +25,32 @@
     }
 
 
-    &__cover {
-            width: 100vw;
-            z-index: 1;
-            position: relative;
+    // &__cover {
+    //         width: 100vw;
+    //         z-index: 1;
+    //         position: relative;
     
-        }
+    //     }
 
 
     &__title {
 
-        // display: flex;
-        position: absolute;
+        display: flex;
         color: white;
-        z-index: 2;
 
         @include mobile {
             @include fontstyle(24px, 32px, 700);
-            padding: 10rem 36px 10rem 36px;
+            padding-left:24px;
         }
     
         @include tablet {
             @include fontstyle(36px, 44px, 700);
-            padding: 25rem 36px 10rem 36px;
+            padding-left: 36px;
         }
 
         @include desktop {
             @include fontstyle(36px, 44px, 700);
-            padding: 25rem 36px 10rem 36px;
+            padding-left: 36px;
         }
     }
 
