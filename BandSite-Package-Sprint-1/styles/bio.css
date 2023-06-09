@@ -157,7 +157,10 @@
   background-image: url("../assets/images/hero-bio.jpg");
   display: flex;
   align-items: center;
-  height: 50vh;
+  background-size: cover;
+  background-repeat: none;
+  height: 40rem;
+  background-color: #323232, 0.5;
 }
 @media (min-width: 0px) and (max-width: 767px) {
   .heroPage {
@@ -418,40 +421,101 @@
   }
 }
 
-@media (min-width: 0px) and (max-width: 767px) {
-  .mobile_only {
-    visibility: visible;
-  }
-}
-@media (min-width: 768px) and (max-width: 1279px) {
-  .mobile_only {
-    display: none;
-  }
-}
-@media (min-width: 1280px) {
-  .mobile_only {
-    display: none;
-  }
-}
-
-@media (min-width: 0px) and (max-width: 767px) {
-  .tabletdesktop_only {
-    display: none;
-  }
-}
-@media (min-width: 768px) and (max-width: 1279px) {
-  .tabletdesktop_only {
-    visibility: visible;
-  }
-}
-@media (min-width: 1280px) {
-  .tabletdesktop_only {
-    visibility: visible;
-  }
-}
-
 .footer__container {
+  padding: 3rem;
   background-color: #323232;
+}
+.footer__header {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 1rem;
+}
+@media (min-width: 768px) and (max-width: 1279px) {
+  .footer__header {
+    padding-bottom: 1rem;
+    flex-direction: row;
+  }
+}
+@media (min-width: 1280px) {
+  .footer__header {
+    padding-bottom: 1rem;
+    flex-direction: row;
+    width: 100%;
+  }
+}
+.footer__logos {
+  display: none;
+}
+@media (min-width: 768px) and (max-width: 1279px) {
+  .footer__logos {
+    margin-left: auto;
+    display: flex;
+  }
+}
+@media (min-width: 1280px) {
+  .footer__logos {
+    margin-left: auto;
+    display: flex;
+  }
+}
+.footer__icons {
+  display: flex;
+}
+.footer__icons--img {
+  padding-right: 2rem;
+  padding-top: 1rem;
+}
+@media (min-width: 768px) and (max-width: 1279px) {
+  .footer__icons--img {
+    padding-left: 2rem;
+    padding-top: 0rem;
+  }
+}
+@media (min-width: 1280px) {
+  .footer__icons--img {
+    padding-left: 2rem;
+    padding-top: 0rem;
+  }
+}
+.footer__company {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+@media (min-width: 768px) and (max-width: 1279px) {
+  .footer__company {
+    flex-direction: row;
+  }
+}
+@media (min-width: 768px) and (max-width: 1279px) {
+  .footer__company {
+    flex-direction: row;
+  }
+}
+.footer__line {
+  display: flex;
+  flex-direction: column;
+  width: 20rem;
+  font-size: 12px;
+  line-height: 20px;
+  font-weight: 100;
+  color: #FFFFFF;
+  padding-bottom: 1rem;
+}
+.footer__line--people {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: bold;
+}
+.footer__info {
+  display: flex;
+}
+.footer__info--email {
+  text-decoration: none;
+  color: white;
+}
+.footer__spacing {
+  padding-top: 1rem;
 }
 .footer__top {
   display: flex;
@@ -462,265 +526,52 @@
     padding: 24px 16px 16px 16px;
   }
 }
-@media (min-width: 768px) and (max-width: 1279px) {
-  .footer__top {
-    padding: 48px 36px 36px 36px;
-  }
-}
 @media (min-width: 1280px) {
   .footer__top {
     padding: 48px 36px 36px 36px;
   }
 }
 .footer__title {
+  display: flex;
   color: #FFFFFF;
   font-size: 24px;
   line-height: 32px;
   font-weight: 700;
 }
-.footer__icons {
-  display: flex;
-  padding-left: 36px;
-}
-@media (min-width: 0px) and (max-width: 767px) {
-  .footer__icons {
-    padding-left: 24px;
-  }
-}
-.footer__logos {
-  display: flex;
-}
-@media (min-width: 0px) and (max-width: 767px) {
-  .footer__logos {
-    height: 20px;
-    width: 120px;
-    padding-left: 0px;
-    padding-bottom: 16px;
-  }
-}
-@media (min-width: 768px) and (max-width: 1279px) {
-  .footer__logos {
-    margin-left: auto;
-    padding-right: 36px;
-  }
-}
-@media (min-width: 1280px) {
-  .footer__logos {
-    margin-left: auto;
-    padding-right: 36px;
-  }
-}
-
-.footer__middle {
-  display: flex;
-}
-@media (min-width: 0px) and (max-width: 767px) {
-  .footer__middle {
-    padding: 0px 16px 16px 16px;
-    flex-direction: column;
-    width: 90%;
-  }
-}
-@media (min-width: 768px) and (max-width: 1279px) {
-  .footer__middle {
-    padding: 0px 36px 36px 36px;
-    flex-direction: columns;
-    width: 90%;
-  }
-}
-@media (min-width: 1280px) {
-  .footer__middle {
-    padding: 0px 36px 36px 36px;
-    flex-direction: columns;
-    width: 80%;
-  }
-}
-.footer__company {
-  display: inline-grid;
-  color: #FFFFFF;
-}
-@media (min-width: 0px) and (max-width: 767px) {
-  .footer__company {
-    grid-auto-flow: row;
-    flex-basis: 30%;
-    padding-bottom: 16px;
-    font-size: 13px;
-    line-height: 18px;
-    font-weight: 600;
-  }
-}
-@media (min-width: 768px) and (max-width: 1279px) {
-  .footer__company {
-    flex-basis: 30%;
-    font-size: 14px;
-    line-height: 20px;
-    font-weight: 600;
-  }
-}
-@media (min-width: 1280px) {
-  .footer__company {
-    flex-basis: 30%;
-    font-size: 14px;
-    line-height: 20px;
-    font-weight: 600;
-  }
-}
-.footer__bottom {
-  display: flex;
-}
-@media (min-width: 0px) and (max-width: 767px) {
-  .footer__bottom {
-    padding: 0px 16px 16px 16px;
-    flex-direction: column;
-  }
-}
-@media (min-width: 768px) and (max-width: 1279px) {
-  .footer__bottom {
-    padding: 0px 36px 36px 36px;
-    width: 90%;
-    flex-direction: columns;
-  }
-}
-@media (min-width: 1280px) {
-  .footer__bottom {
-    padding: 0px 36px 36px 36px;
-    width: 80%;
-    flex-direction: columns;
-  }
-}
-.footer__address {
-  flex-basis: 30%;
-  display: inline-grid;
-  color: #FFFFFF;
-}
-@media (min-width: 0px) and (max-width: 767px) {
-  .footer__address {
-    font-size: 13px;
-    line-height: 18px;
-    font-weight: 400;
-    padding-bottom: 16px;
-  }
-}
-@media (min-width: 768px) and (max-width: 1279px) {
-  .footer__address {
-    font-size: 14px;
-    line-height: 20px;
-    font-weight: 400;
-  }
-}
-@media (min-width: 1280px) {
-  .footer__address {
-    font-size: 14px;
-    line-height: 20px;
-    font-weight: 400;
-  }
-}
-.footer__email {
-  display: flex;
-}
-@media (min-width: 0px) and (max-width: 767px) {
-  .footer__email {
-    padding: 0px 16px 16px 16px;
-    flex-direction: column;
-  }
-}
-@media (min-width: 768px) and (max-width: 1279px) {
-  .footer__email {
-    padding: 0px 36px 36px 36px;
-    width: 90%;
-    flex-direction: columns;
-  }
-}
-@media (min-width: 1280px) {
-  .footer__email {
-    padding: 0px 36px 36px 36px;
-    width: 80%;
-    flex-direction: columns;
-  }
-}
-.footer__contact {
-  flex-basis: 30%;
-  display: inline-grid;
-  color: #FFFFFF;
-  text-decoration: none;
-}
-@media (min-width: 0px) and (max-width: 767px) {
-  .footer__contact {
-    font-size: 13px;
-    line-height: 18px;
-    font-weight: 400;
-    padding-bottom: 16px;
-  }
-}
-@media (min-width: 768px) and (max-width: 1279px) {
-  .footer__contact {
-    font-size: 14px;
-    line-height: 20px;
-    font-weight: 400;
-  }
-}
-@media (min-width: 1280px) {
-  .footer__contact {
-    font-size: 14px;
-    line-height: 20px;
-    font-weight: 400;
-  }
-}
 
 .copyright {
   display: flex;
   width: 100%;
-}
-@media (min-width: 0px) and (max-width: 767px) {
-  .copyright {
-    padding: 0px 16px 16px 16px;
-    flex-direction: column;
-  }
-}
-@media (min-width: 768px) and (max-width: 1279px) {
-  .copyright {
-    padding: 0px 36px 36px 36px;
-    flex-direction: columns;
-  }
-}
-@media (min-width: 1280px) {
-  .copyright {
-    padding: 0px 36px 36px 36px;
-    flex-direction: columns;
-  }
+  align-items: center;
 }
 .copyright__text {
-  display: inline-grid;
+  display: flex;
   color: #FFFFFF;
 }
 @media (min-width: 0px) and (max-width: 767px) {
   .copyright__text {
-    flex-basis: 100%;
     font-size: 13px;
     line-height: 18px;
-    font-weight: 400;
+    font-weight: 100;
   }
 }
 @media (min-width: 768px) and (max-width: 1279px) {
   .copyright__text {
     font-size: 14px;
     line-height: 20px;
-    font-weight: 400;
-    flex-basis: 100%;
+    font-weight: 100;
   }
 }
 @media (min-width: 1280px) {
   .copyright__text {
     font-size: 14px;
     line-height: 20px;
-    font-weight: 400;
-    flex-basis: 100%;
+    font-weight: 100;
   }
 }
 
 * {
   box-sizing: border-box;
   margin: 0;
-  padding: 0;
   font-family: Avenir-Next;
 }/*# sourceMappingURL=bio.css.map */
