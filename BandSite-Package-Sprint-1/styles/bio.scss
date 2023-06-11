@@ -15,3 +15,82 @@ font-family: Avenir-Next;
 // border: 1px solid red;
 
 }
+
+.comment_box {
+    padding: 1rem;
+}
+
+.comment_container {
+    display: flex;
+    padding: 1rem;
+    align-items: center;
+}
+
+.comment_avatar {
+
+    width:4rem;
+    display: flex;
+    align-items: center;
+
+    &--circle {
+
+        border-radius: 50%;
+        width: 2.25rem;
+        height: 2.25rem;
+
+        @include tablet {
+        width: 3rem;
+        height: 3rem;
+        }
+
+        @include desktop {
+            width: 3rem;
+            height: 3rem;
+            }
+    }
+
+    &--blank {
+
+        border-radius: 50%;
+        width: 2.25rem;
+        height: 2.25rem;
+        background-color: $Mercury;
+
+        @include tablet {
+        width: 3rem;
+        height: 3rem;
+        }
+
+        @include desktop {
+            width: 3rem;
+            height: 3rem;
+            }
+    }
+
+}
+
+.comment_element {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    
+    
+
+    &__input {
+        display: flex;
+        width: 100%;
+        align-items:start;
+        padding: 1rem;
+        border-radius: 0.5rem;
+
+        &--height {
+            height: 10rem;
+        }
+    }
+
+    
+
+
+
+
+}

@@ -206,6 +206,84 @@
   }
 }
 
+.heroPage__shows {
+  background-image: url("../assets/images/hero-shows.jpg");
+  display: flex;
+  align-items: center;
+  background-size: cover;
+  background-repeat: none;
+  height: 40rem;
+  background-color: #323232, 0.5;
+}
+@media (min-width: 0px) and (max-width: 767px) {
+  .heroPage__shows {
+    margin-top: 6.5rem;
+  }
+}
+@media (min-width: 768px) and (max-width: 1279px) {
+  .heroPage__shows {
+    margin-top: 3rem;
+  }
+}
+@media (min-width: 1280px) {
+  .heroPage__shows {
+    margin-top: 3rem;
+  }
+}
+
+.album {
+  display: flex;
+  flex-direction: column;
+  padding-left: 3rem;
+}
+.album__title {
+  color: white;
+  margin-top: 1rem;
+  font-size: 14px;
+  line-height: 32px;
+  font-weight: 700;
+}
+@media (min-width: 768px) and (max-width: 1279px) {
+  .album__title {
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 700;
+  }
+}
+@media (min-width: 1280px) {
+  .album__title {
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 700;
+  }
+}
+.album__title--singer {
+  color: white;
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 700;
+}
+@media (min-width: 768px) and (max-width: 1279px) {
+  .album__title--singer {
+    font-size: 36px;
+    line-height: 32px;
+    font-weight: 700;
+  }
+}
+@media (min-width: 1280px) {
+  .album__title--singer {
+    font-size: 36px;
+    line-height: 32px;
+    font-weight: 700;
+  }
+}
+
+.soundcloud {
+  padding: 2rem;
+  justify-content: center;
+  width: 100%;
+}
+
 .aboutPage {
   display: flex;
   flex-direction: column;
@@ -487,7 +565,7 @@
     flex-direction: row;
   }
 }
-@media (min-width: 768px) and (max-width: 1279px) {
+@media (min-width: 1280px) {
   .footer__company {
     flex-direction: row;
   }
@@ -574,4 +652,71 @@
   box-sizing: border-box;
   margin: 0;
   font-family: Avenir-Next;
+}
+
+.comment_box {
+  padding: 1rem;
+}
+
+.comment_container {
+  display: flex;
+  padding: 1rem;
+  align-items: center;
+}
+
+.comment_avatar {
+  width: 4rem;
+  display: flex;
+  align-items: center;
+}
+.comment_avatar--circle {
+  border-radius: 50%;
+  width: 2.25rem;
+  height: 2.25rem;
+}
+@media (min-width: 768px) and (max-width: 1279px) {
+  .comment_avatar--circle {
+    width: 3rem;
+    height: 3rem;
+  }
+}
+@media (min-width: 1280px) {
+  .comment_avatar--circle {
+    width: 3rem;
+    height: 3rem;
+  }
+}
+.comment_avatar--blank {
+  border-radius: 50%;
+  width: 2.25rem;
+  height: 2.25rem;
+  background-color: #E1E1E1;
+}
+@media (min-width: 768px) and (max-width: 1279px) {
+  .comment_avatar--blank {
+    width: 3rem;
+    height: 3rem;
+  }
+}
+@media (min-width: 1280px) {
+  .comment_avatar--blank {
+    width: 3rem;
+    height: 3rem;
+  }
+}
+
+.comment_element {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.comment_element__input {
+  display: flex;
+  width: 100%;
+  align-items: start;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+.comment_element__input--height {
+  height: 10rem;
 }/*# sourceMappingURL=bio.css.map */

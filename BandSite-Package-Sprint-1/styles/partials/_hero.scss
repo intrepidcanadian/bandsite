@@ -4,39 +4,30 @@
 
 .heroPage {
     background-image: url("../assets/images/hero-bio.jpg");
-    display: flex;  
+    display: flex;
     align-items: center;
     // height: 20rem;
     background-size: cover;
     background-repeat: none;
     height: 40rem;
-    background-color: ($BandSite-Black,0.5);
-    
+    background-color: ($BandSite-Black, 0.5);
 
-    
-                                                                                                                                                                                                         ;
-    
+
+
+    ;
+
     @include mobile {
-        margin-top:6.5rem;
+        margin-top: 6.5rem;
     }
 
     @include tablet {
-        margin-top:3rem;
+        margin-top: 3rem;
 
     }
 
     @include desktop {
-        margin-top:3rem;
+        margin-top: 3rem;
     }
-
-
-    // &__cover {
-    //         width: 100vw;
-    //         z-index: 1;
-    //         position: relative;
-    
-    //     }
-
 
     &__title {
 
@@ -45,9 +36,9 @@
 
         @include mobile {
             @include fontstyle(24px, 32px, 700);
-            padding-left:24px;
+            padding-left: 24px;
         }
-    
+
         @include tablet {
             @include fontstyle(36px, 44px, 700);
             padding-left: 36px;
@@ -58,5 +49,80 @@
             padding-left: 36px;
         }
     }
+
+}
+
+.heroPage__shows {
+    background-image: url("../assets/images/hero-shows.jpg");
+    display: flex;
+    align-items: center;
+    // height: 20rem;
+    background-size: cover;
+    background-repeat: none;
+    height: 40rem;
+    background-color: ($BandSite-Black, 0.5);
+    ;
+
+    @include mobile {
+        margin-top: 6.5rem;
+    }
+
+    @include tablet {
+        margin-top: 3rem;
+
+    }
+
+    @include desktop {
+        margin-top: 3rem;
+    }
+}
+
+.album {
+
+    display: flex;
+    flex-direction: column;
+    padding-left: 3rem;
+
+    &__title {
+
+        color: white;
+        margin-top: 1rem;
+        @include fontstyle(14px, 32px, 700);
+
+        @include tablet {
+            @include fontstyle(24px, 32px, 700)
+        }
+
+        @include desktop {
+            @include fontstyle(24px, 32px, 700)
+        }
+
+        &--singer {
+
+            color: white;
+            @include fontstyle(24px, 32px, 700);
+
+            @include tablet {
+                @include fontstyle(36px, 32px, 700)
+            }
+
+            @include desktop {
+                @include fontstyle(36px, 32px, 700)
+            }
+
+
+
+        }
+
+    }
+
+}
+
+.soundcloud {
+
+padding: 2rem;
+justify-content: center;
+width: 100%;
+
 
 }
