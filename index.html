@@ -82,7 +82,7 @@
 
     <!-- // section for comments -->
     <div class="comment_title">
-        <h1>Join the Conversation</h1>
+        <h1 class = "aboutPage__title">Join the Conversation</h1>
     </div>
 
     <form id="comment_box">
@@ -92,7 +92,7 @@
                 <img class="comment_avatar--circle" src="BandSite-Package-Sprint-1/assets/images/Mohan-muruge.jpg">
             </div>
             <div class="comment_element">
-                <label for="name__submission">Name</label>
+                <label for="name__submission" class ="comment_element__label">NAME</label>
                 <input id="name__submission" class="comment_element__input" type="text" name="name__submission"
                     placeholder="Enter your name">
             </div>
@@ -103,24 +103,24 @@
                 <!-- //keep this blank -->
             </div>
             <div class="comment_element">
-                <label for="comment__submission">Comment</label>
-                <textarea id="comment__submission" class="comment_element__input form__input--height" name="comment__submission"
-                    placeholder="Add a New Comment"></textarea>
+                <label for="comment__submission" class ="comment_element__label">COMMENT</label>
+                <textarea id="comment__submission" class="comment_element__input comment_element__input--height" name="comment__submission"
+                    placeholder="Add a new comment"></textarea>
             </div>
         </div>
         <div class="comment_container">
             <div class="comment_avatar">
 
             </div>
-            <div class>
-                <button class="comment_button" id="button__submissions">COMMENT</button>
+            <div class = comment_button_container>
+                <button class="comment_button_container--format" id="button__submissions">COMMENT</button>
             </div>
         </div>
     </form>
 
-    <section id="comment_section">
+    <div id = "submitted_comment_container">
 
-    </section>
+    </div>
 
 
     <footer class="footer__container">

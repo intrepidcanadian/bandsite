@@ -1,4 +1,3 @@
-
 @use "./partials/header" as *;
 @use "./partials/mixins" as *;
 @use "./partials/variables" as *;
@@ -10,87 +9,364 @@
 * {
     box-sizing: border-box;
 
-margin: 0;
-font-family: Avenir-Next;
-// border: 1px solid red;
+    margin: 0;
+    font-family: Avenir-Next;
+    font-size: 16px;
+    // border: 1px solid red;
 
 }
 
-.comment_box {
-    padding: 1rem;
-}
+.comment {
 
-.comment_container {
-    display: flex;
-    padding: 1rem;
-    align-items: center;
-}
+    &_title {
+        background-color: white;
 
-.comment_avatar {
-
-    width:4rem;
-    display: flex;
-    align-items: center;
-
-    &--circle {
-
-        border-radius: 50%;
-        width: 2.25rem;
-        height: 2.25rem;
-
-        @include tablet {
-        width: 3rem;
-        height: 3rem;
-        }
-
-        @include desktop {
-            width: 3rem;
-            height: 3rem;
-            }
     }
 
-    &--blank {
-
-        border-radius: 50%;
-        width: 2.25rem;
-        height: 2.25rem;
-        background-color: $Mercury;
-
-        @include tablet {
-        width: 3rem;
-        height: 3rem;
-        }
-
-        @include desktop {
-            width: 3rem;
-            height: 3rem;
-            }
+    &_box {
+        padding: 1rem;
     }
 
+    &_container {
+        display: flex;
+        padding: 1rem 3rem 1rem 3rem;
+        align-items: center;
+    }
+
+    &_avatar {
+
+        width: 5rem;
+        height: 5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &--circle {
+
+            border-radius: 50%;
+            width: 2rem;
+            height: 2rem;
+
+            @include tablet {
+                width: 3rem;
+                height: 3rem;
+            }
+
+            @include desktop {
+                width: 3rem;
+                height: 3rem;
+            }
+        }
+
+        &--blank {
+
+            border-radius: 50%;
+            width: 2.25rem;
+            height: 2.25rem;
+            background-color: $Mercury;
+
+            @include tablet {
+                width: 3rem;
+                height: 3rem;
+            }
+
+            @include desktop {
+                width: 3rem;
+                height: 3rem;
+            }
+        }
+
+    }
 }
 
 .comment_element {
     display: flex;
     flex-direction: column;
     width: 100%;
-    
-    
+
+    &__label {
+
+        color: $Silver;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+    }
+
 
     &__input {
         display: flex;
         width: 100%;
-        align-items:start;
+        align-items: start;
         padding: 1rem;
         border-radius: 0.5rem;
+        border-color: 1px solid $Mercury;
+
+        &:active {
+            border-color: 1px solid $BandSite-Black;
+        }
+
+        &.error {
+            border-color: 1px solid #D22D2D;
+        }
+
 
         &--height {
             height: 10rem;
         }
+
     }
 
-    
+}
+
+.comment_button_container {
+    display: flex;
+    width: 100%;
+
+    @include tablet {
+        justify-content: end;
+
+    }
+
+    @include desktop {
+        justify-content: end;
+
+    }
+
+    &--format {
+
+        background-color: $BandSite-Black;
+        color: $White;
+        height: 40px;
+        width: 100%;
+        font-weight: 500px;
+
+        border-radius: 4px;
+
+        &:hover {
+            cursor: grab;
+        }
+
+        @include tablet {
+            width: 150px;
+            padding-left: 32px;
+            padding-right: 32px;
+
+        }
+
+        @include desktop {
+            width: 150px;
+            padding-left: 32px;
+            padding-right: 32px;
+
+        }
+
+
+    }
+}
 
 
 
+.submitted {
+
+    &_container {
+
+        border-top: 1px solid $Mercury;
+        padding: 2rem;
+        display: flex;
+        align-items: center;
+
+
+    }
+
+    &_img {
+
+        border-radius: 50%;
+        width: 2rem;
+        height: 2rem;
+        background-color: $Mercury;
+
+        @include tablet {
+            width: 3rem;
+            height: 3rem;
+        }
+
+        @include desktop {
+            width: 3rem;
+            height: 3rem;
+        }
+    }
+
+    &_name {
+        margin-left: 1rem;
+
+    }
+
+    &_date {
+
+        margin-left: auto;
+
+    }
+
+
+    &_containerBottom {
+
+        padding: 2rem;
+        display: flex;
+    }
+
+    &_name {
+
+        @include fontstyle(13px, 18px, bold);
+
+
+        @include tablet {
+            @include fontstyle(14px, 22px, bold);
+        }
+
+        @include desktop {
+            @include fontstyle(14px, 22px, bold);
+        }
+
+    }
+
+    &_date {
+
+        @include fontstyle(13px, 18px, bold);
+        color: $Silver;
+
+
+        @include tablet {
+            @include fontstyle(14px, 22px, bold);
+        }
+
+        @include desktop {
+            @include fontstyle(14px, 22px, bold);
+        }
+
+    }
+
+
+}
+
+
+.placeholder {
+
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    background-color: white;
+
+    @include tablet {
+        width: 4rem;
+        height: 3rem;
+    }
+
+    @include desktop {
+        width: 4rem;
+        height: 3rem;
+    }
+}
+
+.showTitle {
+
+    @include fontstyle(24px, 32px, 700);
+    padding: 1rem;
+
+    @include tablet {
+
+        @include fontstyle(36px, 32px, 600);
+
+    }
+
+    @include desktop {
+        @include fontstyle(36px, 32px, 600);
+
+    }
+
+    &_container {
+
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        padding: 2rem;
+    }
+
+}
+
+#concertsContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 2rem;
+}
+
+.header-row {
+    color: $Silver;
+    display: flex;
+    align-items: center;
+    padding: 16px;
+
+    @include tablet {
+        padding: 24px 18px 24px 28px;
+    }
+
+    @include desktop {
+        padding: 24px 18px 24px 28px;
+    }
+
+}
+
+.concert-row {
+    display: flex;
+    align-items: center;
+    padding: 16px;
+    border-bottom: 1px solid $Mercury;
+
+    @include tablet {
+        padding: 24px 18px 24px 28px;
+    }
+
+    @include desktop {
+        padding: 24px 18px 24px 28px;
+    }
+
+}
+
+.concert-row:hover {
+    background-color: $Alabaster;
+
+}
+
+
+.selected {
+    background-color: $Mercury;
+
+}
+
+.boldDate {
+
+    font-weight: bold;
+    width: 15rem;
+}
+
+
+.header-cell,
+.cell {
+    width: 15rem;
+}
+
+.header-cell {
+    font-weight: bold;
+
+}
+
+.buy-tickets-button {
+    background-color: $BandSite-Black;
+    color: $White;
+    padding-left: 32px;
+    padding-right: 32px;
+    width: 175px;
+    height: 40px;
+    border-radius: 4px;
+    font-weight: 500;
 
 }

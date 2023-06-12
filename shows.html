@@ -1,87 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sprint 1 - Mobile - Biography</title>
-    <link rel="stylesheet" href = "/BandSite-Package-Sprint-1/styles/bio.css">
+    <link rel="stylesheet" href="/BandSite-Package-Sprint-1/styles/bio.css">
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="./sound.js" defer></script>
 
 </head>
+
 <body>
-    
+
     <header class="pageHeader-list">
-        <a class="pageHeader-list__logo" href ="index.html">
-            <img src = "BandSite-Package-Sprint-1/assets/Logo/Logo-bandsite.svg">
+        <a class="pageHeader-list__logo" href="index.html">
+            <img src="BandSite-Package-Sprint-1/assets/Logo/Logo-bandsite.svg">
         </a>
-            <nav class="pageHeader-list__nav">
-            <ul class ="pageHeader-list__nav--items">
-                <a href = "/index.html" class = "pageHeader-list__nav--link">Biography</a>
+        <nav class="pageHeader-list__nav">
+            <ul class="pageHeader-list__nav--items">
+                <a href="/index.html" class="pageHeader-list__nav--link">Biography</a>
             </ul>
             <ul class="pageHeader-list__nav--items">
-                <a href = "/shows.html" class = "pageHeader-list__nav--link">Shows</a>
+                <a href="/shows.html" class="pageHeader-list__nav--link">Shows</a>
             </ul>
         </nav>
     </header>
-    <div class = "heroPage__shows"> 
-        <div class = "album">
-            <h1 class = "album__title">NCS Release</h1>
-            <h1 class = "album__title album__title--singer">Alan Walker - Dreamer</h1>
+    <div class="heroPage__shows">
+        <div class="album">
+            <h1 class="album__title">NCS Release</h1>
+            <h1 class="album__title album__title--singer">Alan Walker - Dreamer</h1>
         </div>
-        <div class = "soundcloud">
-            <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1480196566&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
-            <div style="font-size: 10px; color: white;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/nocopyrightsounds" title="NCS" target="_blank" style="color: #cccccc; text-decoration: none;">NCS</a> · <a href="https://soundcloud.com/nocopyrightsounds/alan-walker-dreamer-ncs-release" title="Alan Walker - Dreamer [NCS Release]" target="_blank" style="color: #cccccc; text-decoration: none;">Alan Walker - Dreamer [NCS Release]</a></div>    
-        </div>    
+        <div class="soundcloud">
+            <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay"
+                src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1480196566&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+            <div
+                style="font-size: 10px; color: white;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;">
+                <a href="https://soundcloud.com/nocopyrightsounds" title="NCS" target="_blank"
+                    style="color: #cccccc; text-decoration: none;">NCS</a> · <a
+                    href="https://soundcloud.com/nocopyrightsounds/alan-walker-dreamer-ncs-release"
+                    title="Alan Walker - Dreamer [NCS Release]" target="_blank"
+                    style="color: #cccccc; text-decoration: none;">Alan Walker - Dreamer [NCS Release]</a></div>
+        </div>
+    </div>
+
+    <div class = showTitle_container>
+        <h1 class="showTitle">
+            Shows
+        </h1>
+        <div id="concertsContainer">
+
+        </div>
     </div>
 
 
 
 
-
-    <footer class = "footer__container">
-        <div class = "footer__header">
-            <h2 class = "footer__title">Get in Touch</h2>
-            <div class = "footer__icons">
-                <img class = "footer__icons--img" src ="BandSite-Package-Sprint-1/assets/icons/svg/Icon-instagram.svg", alt = "Instagram Icon">
-                <img class = "footer__icons--img" src ="BandSite-Package-Sprint-1/assets/icons/svg/Icon-facebook.svg", alt = "Facebook Icon">
-                <img class = "footer__icons--img" src ="BandSite-Package-Sprint-1/assets/icons/svg/Icon-twitter.svg", alt = "Twitter Icon">
+    <footer class="footer__container">
+        <div class="footer__header">
+            <h2 class="footer__title">Get in Touch</h2>
+            <div class="footer__icons">
+                <img class="footer__icons--img" src="BandSite-Package-Sprint-1/assets/icons/svg/Icon-instagram.svg" ,
+                    alt="Instagram Icon">
+                <img class="footer__icons--img" src="BandSite-Package-Sprint-1/assets/icons/svg/Icon-facebook.svg" ,
+                    alt="Facebook Icon">
+                <img class="footer__icons--img" src="BandSite-Package-Sprint-1/assets/icons/svg/Icon-twitter.svg" ,
+                    alt="Twitter Icon">
             </div>
-            <img class = "footer__logos" src ="BandSite-Package-Sprint-1/assets/Logo/Logo-bandsite.svg", alt = "Bandsite Icon">
+            <img class="footer__logos" src="BandSite-Package-Sprint-1/assets/Logo/Logo-bandsite.svg" ,
+                alt="Bandsite Icon">
         </div>
-        <div class = "footer__company">
-        <div class = "footer__line">
-            <span class = "footer__line--people">Cam Adams</span>
-            <span class = "footer__line--people">The Bee Knees Management</span>
-            <span class = "footer__info footer__spacing">503 Broadway Penthouse,</span>
-            <span class = "footer__info">New York, NY 10012, USA</span>
-            <a class = "footer__info--email footer__spacing" href>info@thebeesknees.com</a>
+        <div class="footer__company">
+            <div class="footer__line">
+                <span class="footer__line--people">Cam Adams</span>
+                <span class="footer__line--people">The Bee Knees Management</span>
+                <span class="footer__info footer__spacing">503 Broadway Penthouse,</span>
+                <span class="footer__info">New York, NY 10012, USA</span>
+                <a class="footer__info--email footer__spacing" href>info@thebeesknees.com</a>
+            </div>
+            <div class="footer__line">
+                <span class="footer__line--people">Pearl Gregg</span>
+                <span class="footer__line--people">Limitless Artist Group</span>
+                <span class="footer__info footer__spacing">Booking Agent for</span>
+                <span class="footer__info">USA / South America / Japan</span>
+                <a class="footer__info--email footer__spacing" href>pearl.gregg@limitlessag.com</a>
+            </div>
+            <div class="footer__line">
+                <span class="footer__line--people">Carson Whyte</span>
+                <span class="footer__line--people">ARCH Entertainment</span>
+                <span class="footer__info footer__spacing">Booking Agent</span>
+                <span class="footer__info">UK / EU / AU</span>
+                <a class="footer__info--email footer__spacing" href>cwhyte@archentertainment.com</a>
+            </div>
         </div>
-        <div class = "footer__line">
-            <span class = "footer__line--people">Pearl Gregg</span>
-            <span class = "footer__line--people">Limitless Artist Group</span>
-            <span class = "footer__info footer__spacing">Booking Agent for</span>
-            <span class = "footer__info">USA / South America / Japan</span>
-            <a class = "footer__info--email footer__spacing" href>pearl.gregg@limitlessag.com</a>
-        </div> 
-        <div class = "footer__line">
-            <span class = "footer__line--people">Carson Whyte</span>
-            <span class = "footer__line--people">ARCH Entertainment</span>
-            <span class = "footer__info footer__spacing">Booking Agent</span>
-            <span class = "footer__info">UK / EU / AU</span>
-            <a class = "footer__info--email footer__spacing" href>cwhyte@archentertainment.com</a>
-        </div> 
+        <div class="copyright">
+            <span class="copyright__text">Copyright The Bees Knees © 2021 All Rights Reserved</span>
         </div>
-        <div class = "copyright">
-            <span class = "copyright__text">Copyright The Bees Knees © 2021 All Rights Reserved</span>
-        </div> 
 
 
 
-</footer">
+        </footer">
 
 
 
 </body>
+
 </html>
