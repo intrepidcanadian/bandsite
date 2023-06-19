@@ -25,30 +25,30 @@ const name__submission = document.getElementById("name__submission");
 const comment__submission = document.getElementById("comment__submission");
 const buttonSubmit = document.getElementById("comment_box");
 
-function displayComment(array,number) {
+function displayComment(array, number) {
 
     const commentElement = document.getElementById("submitted_comment_container");
-    
+
     const commentSection = document.createElement("div");
     const commentSectionBottom = document.createElement("div");
     const commentAvatar = document.createElement("div");
     const commentImg = document.createElement("img");
-    const placeholder =document.createElement("div");
+    const placeholder = document.createElement("div");
     const commentSubmitter = document.createElement("div")
     const commentDate = document.createElement("div")
     const commentComment = document.createElement("div")
 
-    const commentDateValue = new Date(array[number].date)
+    const commentDateValue = new Date(array[number].timestamp)
     const formattedDate = commentDateValue.toLocaleDateString("en-US", {
         year: "numeric",
         month: "long",
         day: "numeric"
-      });
+    });
 
     commentComment.innerText = array[number].comment;
     commentDate.innerText = formattedDate;
     commentSubmitter.innerText = array[number].name;
-    
+
 
     commentSection.classList.add("submitted_container")
     commentSectionBottom.classList.add("submitted_containerBottom")
@@ -60,7 +60,7 @@ function displayComment(array,number) {
     commentDate.classList.add("submitted_date");
 
     // commentSection.appendChild(commentImg);
-  
+
     commentAvatar.appendChild(commentImg);
     commentSection.appendChild(commentAvatar);
     commentSection.appendChild(commentSubmitter);
@@ -74,48 +74,120 @@ function displayComment(array,number) {
     commentElement.appendChild(commentSectionBottom);
 }
 
+// const commentSubmission = buttonSubmit.addEventListener("submit", (event) => {
+//     event.preventDefault();
+
+//     const name_input = name__submission.value;
+//     const comment_input = comment__submission.value;
+//     const currentDate = new Date();
+//     const formattedDate = currentDate.toDateString();
+
+//     const inputComment =
+//     {
+//         name: name_input,
+//         comment: comment_input,
+//         date: formattedDate
+//     }
+
+//     // add into new array the input boxes
+//     commentsArr.push(inputComment);
+
+
+// clear current HTML
+
+//     const commentElement = document.getElementById("submitted_comment_container");
+//     commentElement.innerHTML = ""
+
+
+//     const sortedComments = commentsArr.sort((a, b) => {
+//         return new Date(b.date) - new Date(a.date);
+
+//     });
+
+//     // i need to loop so that the array is appended in.
+
+//     for (let i in commentsArr) {
+
+//         console.log(sortedComments[i]);
+//         displayComment(sortedComments, i)
+
+//     }
+
+// name__submission.value = "";
+// comment__submission.value = "";
+
+// })
+
+let apiKey = "c9196ec4-784b-44a9-b795-5b0c1406b1f0";
+
+// axios.get('https://project-1-api.herokuapp.com/register')
+//     .then(function (response) {
+//         apiKey = response.data.api_key;
+//         console.log(response)
+//         console.log(apiKey);
+//     .catch (function (error) {
+//             console.error(error);
+//         });
+
+
+postedComment = []
+
 const commentSubmission = buttonSubmit.addEventListener("submit", (event) => {
     event.preventDefault();
 
-  
-
     const name_input = name__submission.value;
     const comment_input = comment__submission.value;
-    const currentDate = new Date();
-    const formattedDate = currentDate.toDateString();
+    // const currentDate = new Date();
+    // const formattedDate = currentDate.toDateString();
 
     const inputComment =
     {
         name: name_input,
         comment: comment_input,
-        date: formattedDate
     }
 
-    // add into new array the input boxes
-    commentsArr.push(inputComment);
+    axios.post(`https://project-1-api.herokuapp.com/comments?api_key=${apiKey}`, inputComment, {
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    })
+        .then(function (response3) {
+            const postedComment = response3.data;
+            console.log(postedComment);
+            return refreshComments()
+        })
 
-  
-    // clear current HTML
-
-    const commentElement = document.getElementById("submitted_comment_container");
-    commentElement.innerHTML =""
+});
 
 
-    const sortedComments = commentsArr.sort((a, b) => {
-        return new Date(b.date) - new Date(a.date);
+function refreshComments() {
+    axios.get(`https://project-1-api.herokuapp.com/comments?api_key=${apiKey}`)
+        .then(function (response2) {
+            const dataGrab = response2.data;
+            console.log(dataGrab);
+            const sortedComments = dataGrab.sort((a, b) => {
+                return new Date(b.timestamp) - new Date(a.timestamp);
+            });
+            console.log(sortedComments);
+            return sortedComments;
 
-    });
+        })
 
-    // i need to loop so that the array is appended in.
+        .then(function (sortedComments) {
+            const commentElement = document.getElementById("submitted_comment_container");
+            commentElement.innerHTML = ""
 
-    for (let i in commentsArr) {
+            for (let i in sortedComments) {
 
-        console.log(sortedComments[i]);
-        displayComment(sortedComments, i)
-        
-    }
+                console.log(sortedComments[i]);
+                displayComment(sortedComments, i)
 
-    name__submission.value = "";
-    comment__submission.value = "";
+            }
 
-})
+            name__submission.value = "";
+            comment__submission.value = "";
+        });
+
+}
+
+refreshComments();
